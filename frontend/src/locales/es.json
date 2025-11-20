@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "report": "Reportar Incidente",
+    "library": "Biblioteca",
+    "analytics": "Analíticas",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "guidance": "Guía de Seguridad"
+  },
+  "home": {
+    "hero_subtitle": "Reporta, analiza y visualiza preocupaciones de seguridad en tu lugar de trabajo, escuela o comunidad. Privado. Anónimo. Con IA.",
+    "cta_report": "Reportar un Incidente",
+    "cta_login": "Iniciar Sesión",
+    "feature_1_title": "Privado y Seguro",
+    "feature_1_desc": "Tus reportes están protegidos. Envía anónimamente o con una cuenta verificada.",
+    "feature_2_title": "Insights con IA",
+    "feature_2_desc": "Extracción de palabras clave, etiquetado de riesgos y clasificación de gravedad automáticos.",
+    "feature_3_title": "Analíticas Comunitarias",
+    "feature_3_desc": "Visualiza tendencias e identifica patrones antes de que el daño escale."
+  },
+  "auth": {
+    "login_title": "Iniciar Sesión",
+    "register_title": "Crear Cuenta",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "username": "Nombre de Usuario",
+    "submit_login": "Iniciar Sesión",
+    "submit_register": "Crear Cuenta",
+    "no_account": "¿No tienes cuenta?",
+    "have_account": "¿Ya tienes una cuenta?",
+    "sign_up": "Regístrate",
+    "sign_in": "Inicia sesión"
+  },
+  "report": {
+    "title": "Reportar un Incidente",
+    "category": "Categoría",
+    "type": "Tipo de Incidente",
+    "description": "Descripción",
+    "description_hint": "Describe qué sucedió. Sé tan detallado como te sientas seguro compartiendo.",
+    "location": "Ubicación (sin dirección exacta)",
+    "location_hint": "ej. Área del centro, oficina piso 3, gimnasio escolar...",
+    "anonymous": "Enviar anónimamente",
+    "submit": "Enviar Reporte",
+    "categories": {
+      "work": "Trabajo",
+      "school": "Escuela",
+      "community": "Comunidad",
+      "family": "Familia"
+    },
+    "types": {
+      "harassment": "Acoso",
+      "bullying": "Intimidación",
+      "hazard": "Peligro Físico",
+      "threat": "Amenaza",
+      "discrimination": "Discriminación",
+      "violence": "Violencia",
+      "other": "Otro"
+    },
+    "ai_analysis": "Análisis de Riesgo con IA",
+    "severity": "Gravedad",
+    "tags": "Etiquetas de Riesgo",
+    "keywords": "Palabras Clave",
+    "summary": "Resumen",
+    "attach_photo": "Adjuntar Foto (Opcional)",
+    "choose_photo": "Elegir Imagen",
+    "photo_hint": "JPEG, PNG, GIF o WebP — máximo 5MB. No se almacena metadata.",
+    "success": "Incidente reportado exitosamente",
+    "report_another": "Reportar Otro"
+  },
+  "library": {
+    "title": "Biblioteca de Incidentes",
+    "filter_category": "Todas las Categorías",
+    "filter_severity": "Todas las Gravedades",
+    "no_incidents": "No se encontraron incidentes. Sé el primero en reportar."
+  },
+  "analytics": {
+    "title": "Analíticas de Seguridad",
+    "by_category": "Incidentes por Categoría",
+    "over_time": "Incidentes a lo Largo del Tiempo",
+    "top_tags": "Etiquetas de Riesgo Principales",
+    "severity_dist": "Distribución de Gravedad"
+  },
+  "severity": {
+    "low": "Bajo",
+    "medium": "Medio",
+    "high": "Alto"
+  },
+  "dashboard": {
+    "total": "Total de Incidentes",
+    "recent": "Incidentes Recientes",
+    "quick_actions": "Acciones Rápidas"
+  },
+  "guidance": {
+    "title": "Guía de Seguridad",
+    "subtitle": "Orientación práctica para mantenerse seguro, documentar incidentes y conocer sus derechos.",
+    "privacy_title": "Compromiso de Privacidad",
+    "privacy_body": "VigilSafe no vende, comparte ni divulga sus datos personales a terceros. Los reportes anónimos no contienen información de identificación. Los reportes con sesión iniciada son visibles solo para usted y los administradores de su organización.",
+    "terms_body": "Al usar VigilSafe, acepta usar esta plataforma únicamente para documentar preocupaciones legítimas de seguridad. El mal uso, incluidos reportes falsos, puede resultar en la cancelación de la cuenta. VigilSafe es una herramienta de documentación — en emergencias, siempre contacte primero a los servicios de emergencia locales."
+  }
+}

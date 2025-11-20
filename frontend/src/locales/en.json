@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "report": "Report Incident",
+    "library": "Incident Library",
+    "analytics": "Analytics",
+    "login": "Login",
+    "register": "Sign Up",
+    "logout": "Logout",
+    "guidance": "Safety Guide"
+  },
+  "home": {
+    "hero_subtitle": "Report, analyze, and visualize safety concerns in your workplace, school, or community. Private. Anonymous. AI-powered.",
+    "cta_report": "Report an Incident",
+    "cta_login": "Sign In",
+    "feature_1_title": "Private & Secure",
+    "feature_1_desc": "Your reports are protected. Submit anonymously or with a verified account.",
+    "feature_2_title": "AI Risk Insights",
+    "feature_2_desc": "Automatic keyword extraction, risk tagging, and severity classification.",
+    "feature_3_title": "Community Analytics",
+    "feature_3_desc": "Visualize trends and identify patterns before harm escalates."
+  },
+  "auth": {
+    "login_title": "Sign In",
+    "register_title": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "submit_login": "Sign In",
+    "submit_register": "Create Account",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?",
+    "sign_up": "Sign up",
+    "sign_in": "Sign in"
+  },
+  "report": {
+    "title": "Report an Incident",
+    "category": "Category",
+    "type": "Incident Type",
+    "description": "Description",
+    "description_hint": "Describe what happened. Be as detailed as you feel safe sharing.",
+    "location": "Location (no exact address)",
+    "location_hint": "e.g. Downtown area, 3rd floor office, school gym...",
+    "anonymous": "Submit anonymously",
+    "submit": "Submit Report",
+    "categories": {
+      "work": "Workplace",
+      "school": "School",
+      "community": "Community",
+      "family": "Family"
+    },
+    "types": {
+      "harassment": "Harassment",
+      "bullying": "Bullying",
+      "hazard": "Physical Hazard",
+      "threat": "Threat",
+      "discrimination": "Discrimination",
+      "violence": "Violence",
+      "other": "Other"
+    },
+    "ai_analysis": "AI Risk Analysis",
+    "severity": "Severity",
+    "tags": "Risk Tags",
+    "keywords": "Keywords",
+    "summary": "Summary",
+    "attach_photo": "Attach Photo (Optional)",
+    "choose_photo": "Choose Image",
+    "photo_hint": "JPEG, PNG, GIF or WebP — max 5MB. No metadata is stored.",
+    "success": "Incident reported successfully",
+    "report_another": "Report Another"
+  },
+  "library": {
+    "title": "Incident Library",
+    "filter_category": "All Categories",
+    "filter_severity": "All Severities",
+    "no_incidents": "No incidents found. Be the first to report."
+  },
+  "analytics": {
+    "title": "Safety Analytics",
+    "by_category": "Incidents by Category",
+    "over_time": "Incidents Over Time",
+    "top_tags": "Top Risk Tags",
+    "severity_dist": "Severity Distribution"
+  },
+  "severity": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "dashboard": {
+    "total": "Total Incidents",
+    "recent": "Recent Incidents",
+    "quick_actions": "Quick Actions"
+  },
+  "guidance": {
+    "title": "Safety Guidance",
+    "subtitle": "Practical guidance for staying safe, documenting incidents, and knowing your rights.",
+    "privacy_title": "Privacy Commitment",
+    "privacy_body": "VigilSafe does not sell, share, or disclose your personal data to third parties. Anonymous reports contain no identifying information. Logged-in reports are visible only to you and administrators of your organization.",
+    "terms_body": "By using VigilSafe, you agree to use this platform solely for documenting legitimate safety concerns. Misuse, including false reports, may result in account termination. VigilSafe is a documentation tool — for emergencies, always contact local emergency services first."
+  }
+}
