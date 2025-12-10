@@ -13,7 +13,12 @@ def create_app(config_class=Config):
 
     db.init_app(app)
     jwt.init_app(app)
-    CORS(app, origins=['http://localhost:5173'])
+    allowed_origins = [
+        'http://localhost:5173',
+        'https://vigilsafe-chi.vercel.app',
+        'https://vigilsafe.vercel.app',
+    ]
+    CORS(app, origins=allowed_origins)
 
     from app.routes.auth import auth_bp
     from app.routes.incidents import incidents_bp
