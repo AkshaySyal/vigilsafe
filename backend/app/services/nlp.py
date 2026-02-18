@@ -45,9 +45,9 @@ def predict_tags(text: str) -> list:
 
 def classify_severity(text: str, tags: list) -> str:
     text_lower = text.lower()
-    if any(w in text_lower for w in HIGH_SEVERITY_WORDS):
+    if any(w in text_lower for w in HIGH_SEVERITY_WORDS) or len(tags) >= 3:
         return 'high'
-    if any(w in text_lower for w in MEDIUM_SEVERITY_WORDS) or len(tags) >= 2:
+    if any(w in text_lower for w in MEDIUM_SEVERITY_WORDS) or len(tags) >= 1:
         return 'medium'
     return 'low'
 
