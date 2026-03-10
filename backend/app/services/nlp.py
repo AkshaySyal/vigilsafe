@@ -2,7 +2,7 @@ import os
 import re
 import requests
 
-HUGGINGFACE_API_KEY = os.environ.get('HUGGINGFACE_API_KEY', '')
+
 
 RISK_KEYWORDS = {
     'physical_hazard': ['broken', 'fire', 'electrical', 'flooding', 'injury', 'dangerous', 'unsafe', 'wiring', 'chemical', 'exposed', 'leak'],
@@ -53,10 +53,18 @@ def classify_severity(text: str, tags: list) -> str:
 
 
 def get_hf_summary(text: str) -> str:
+    api_key = os.environ.get('HUGGINGFACE_API_KEY', '')
+    if not api_key:
+        return ''
     url = 'https://api-inference.huggingface.co/models/facebook/bart-large-cnn'
-    headers = {'Authorization': f'Bearer {HUGGINGFACE_API_KEY}'}
+    headers = {'Authorization': f'Bearer {api_key}'}
     payload = {'inputs': text, 'parameters': {'max_length': 80, 'min_length': 20}}
-    response = requests.post(url, headers=headers, json=payload, timeout=15)
+    response = requests.post(url, headers=headers, json=payload, timeout=30)
+    if response.status_code == 503:
+        # Model is loading — wait and retry once
+        import time
+        time.sleep(20)
+        response = requests.post(url, headers=headers, json=payload, timeout=30)
     response.raise_for_status()
     result = response.json()
     if isinstance(result, list) and result:
@@ -70,7 +78,7 @@ def analyze_incident(description: str) -> dict:
     severity = classify_severity(description, tags)
 
     summary = None
-    if HUGGINGFACE_API_KEY and len(description) > 100:
+    if os.environ.get('HUGGINGFACE_API_KEY') and len(description) > 100:
         try:
             summary = get_hf_summary(description)
         except Exception:
