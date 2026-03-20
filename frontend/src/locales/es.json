@@ -44,6 +44,8 @@
     "location_hint": "ej. Área del centro, oficina piso 3, gimnasio escolar...",
     "anonymous": "Enviar anónimamente",
     "submit": "Enviar Reporte",
+    "analyzing": "Analizando...",
+    "ai_delay_hint": "El resumen de IA puede tardar hasta 25 segundos en el primer envío.",
     "categories": {
       "work": "Trabajo",
       "school": "Escuela",

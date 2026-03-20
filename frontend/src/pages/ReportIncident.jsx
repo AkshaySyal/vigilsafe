@@ -202,8 +202,11 @@ export default function ReportIncident() {
           {uploadProgress && <p style={{ fontSize: '0.85rem', color: 'var(--text-light)', marginBottom: '0.75rem' }}>{uploadProgress}</p>}
 
           <button type="submit" className="btn btn-primary" disabled={loading}>
-            {loading ? '...' : t('report.submit')}
+            {loading ? t('report.analyzing') : t('report.submit')}
           </button>
+          <p className="form-hint" style={{ marginTop: '0.5rem' }}>
+            {t('report.ai_delay_hint')}
+          </p>
         </form>
       </div>
     </div>

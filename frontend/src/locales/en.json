@@ -44,6 +44,8 @@
     "location_hint": "e.g. Downtown area, 3rd floor office, school gym...",
     "anonymous": "Submit anonymously",
     "submit": "Submit Report",
+    "analyzing": "Analyzing...",
+    "ai_delay_hint": "AI summary may take up to 25 seconds on first submission.",
     "categories": {
       "work": "Workplace",
       "school": "School",
