@@ -81,8 +81,9 @@ def analyze_incident(description: str) -> dict:
     if os.environ.get('HUGGINGFACE_API_KEY') and len(description) > 100:
         try:
             summary = get_hf_summary(description)
-        except Exception:
-            pass
+            print(f'[HF] summary result: {repr(summary)}')
+        except Exception as e:
+            print(f'[HF] error: {e}')
 
     return {
         'keywords': keywords,
