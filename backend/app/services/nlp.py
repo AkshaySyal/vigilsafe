@@ -72,18 +72,26 @@ def get_hf_summary(text: str) -> str:
     return ''
 
 
+def local_summary(text: str) -> str:
+    sentences = re.split(r'(?<=[.!?])\s+', text.strip())
+    first = ' '.join(sentences[:2])
+    return first[:200] + ('...' if len(first) > 200 else '')
+
+
 def analyze_incident(description: str) -> dict:
     keywords = extract_keywords(description)
     tags = predict_tags(description)
     severity = classify_severity(description, tags)
 
     summary = None
-    if os.environ.get('HUGGINGFACE_API_KEY') and len(description) > 100:
-        try:
-            summary = get_hf_summary(description)
-            print(f'[HF] summary result: {repr(summary)}')
-        except Exception as e:
-            print(f'[HF] error: {e}')
+    if len(description) > 100:
+        if os.environ.get('HUGGINGFACE_API_KEY'):
+            try:
+                summary = get_hf_summary(description)
+            except Exception as e:
+                print(f'[HF] error: {e}')
+        if not summary:
+            summary = local_summary(description)
 
     return {
         'keywords': keywords,
