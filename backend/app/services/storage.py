@@ -46,13 +46,11 @@ def save_image(file_storage) -> str:
     use_s3 = os.environ.get('USE_S3', 'false').lower() == 'true'
 
     if use_s3:
-        # S3 upload — uncomment when ready
-        # import boto3
-        # s3 = boto3.client('s3')
-        # bucket = os.environ['AWS_BUCKET']
-        # s3.upload_fileobj(file_storage, bucket, filename, ExtraArgs={'ContentType': file_storage.mimetype})
-        # return f"https://{bucket}.s3.amazonaws.com/{filename}"
-        raise NotImplementedError("S3 not configured yet — set USE_S3=false or configure AWS credentials")
+        import boto3
+        s3 = boto3.client('s3')
+        bucket = os.environ['AWS_BUCKET']
+        s3.upload_fileobj(file_storage, bucket, filename, ExtraArgs={'ContentType': file_storage.mimetype})
+        return f"https://{bucket}.s3.amazonaws.com/{filename}"
 
     upload_dir = os.path.join(current_app.root_path, '..', 'uploads')
     os.makedirs(upload_dir, exist_ok=True)
