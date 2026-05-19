@@ -5,6 +5,7 @@ from app import db
 from app.models.incident import Incident
 from app.models.user import User
 from app.services.nlp import analyze_incident
+from app.utils import require_role
 
 incidents_bp = Blueprint('incidents', __name__)
 
@@ -19,6 +20,7 @@ def _current_user():
 
 
 @incidents_bp.route('/create', methods=['POST'])
+@require_role('reporter')
 def create_incident():
     data = request.get_json()
     if not data or not data.get('category') or not data.get('description'):

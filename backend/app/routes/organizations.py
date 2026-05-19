@@ -3,6 +3,7 @@ from flask_jwt_extended import jwt_required, get_jwt_identity
 from app import db
 from app.models.organization import Organization
 from app.models.user import User
+from app.utils import require_role
 
 org_bp = Blueprint('organizations', __name__)
 
@@ -15,7 +16,7 @@ def get_organizations():
 
 
 @org_bp.route('/create', methods=['POST'])
-@jwt_required()
+@require_role('reporter')
 def create_organization():
     data = request.get_json()
     if not data or not data.get('name'):
@@ -44,3 +45,25 @@ def join_organization(org_id):
     user.org_id = org_id
     db.session.commit()
     return jsonify({'message': f'Joined {org.name}', 'org': org.to_dict()}), 200
+
+
+@org_bp.route('/<int:org_id>/members/<int:user_id>/role', methods=['PATCH'])
+@require_role('admin')
+def set_member_role(org_id, user_id):
+    """Admin-only: set a member's role to viewer, reporter, or admin."""
+    admin = User.query.get(int(get_jwt_identity()))
+    if admin.org_id != org_id:
+        return jsonify({'error': 'You are not an admin of this organization'}), 403
+
+    data = request.get_json()
+    new_role = data.get('role') if data else None
+    if new_role not in ('viewer', 'reporter', 'admin'):
+        return jsonify({'error': 'role must be viewer, reporter, or admin'}), 400
+
+    target = User.query.get_or_404(user_id)
+    if target.org_id != org_id:
+        return jsonify({'error': 'User is not a member of this organization'}), 400
+
+    target.role = new_role
+    db.session.commit()
+    return jsonify({'message': f'{target.username} is now {new_role}', 'user': target.to_dict()}), 200
