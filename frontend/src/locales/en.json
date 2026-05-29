@@ -8,7 +8,8 @@
     "login": "Login",
     "register": "Sign Up",
     "logout": "Logout",
-    "guidance": "Safety Guide"
+    "guidance": "Safety Guide",
+    "organizations": "My Organization"
   },
   "home": {
     "hero_subtitle": "Report, analyze, and visualize safety concerns in your workplace, school, or community. Private. Anonymous. AI-powered.",
@@ -94,6 +95,31 @@
     "total": "Total Incidents",
     "recent": "Recent Incidents",
     "quick_actions": "Quick Actions"
+  },
+  "org": {
+    "title": "My Organization",
+    "your_org": "Your Organization",
+    "no_org": "You are not part of any organization yet. Create one or join an existing one.",
+    "viewer_notice": "You have viewer access — you can browse incidents but cannot submit reports.",
+    "login_required": "Please sign in to manage organizations.",
+    "create_title": "Create Organization",
+    "name": "Organization Name",
+    "name_placeholder": "e.g. Riverside School, Unity Warehouse...",
+    "name_required": "Organization name is required.",
+    "type": "Type",
+    "create_btn": "Create & Become Admin",
+    "created": "Organization created. You are now the admin.",
+    "create_error": "Failed to create organization.",
+    "join_title": "Join an Organization",
+    "join_btn": "Join",
+    "joined": "Successfully joined the organization.",
+    "join_error": "Failed to join organization.",
+    "members_title": "Members",
+    "member_name": "Username",
+    "member_email": "Email",
+    "member_role": "Role",
+    "role_updated": "Role updated successfully.",
+    "role_error": "Failed to update role."
   },
   "guidance": {
     "title": "Safety Guidance",

@@ -28,6 +28,7 @@ export default function Navbar() {
         {user ? (
           <>
             <li><Link to="/dashboard">{t('nav.dashboard')}</Link></li>
+            <li><Link to="/organizations">{t('nav.organizations')}</Link></li>
             <li>
               <button
                 onClick={handleLogout}

@@ -10,6 +10,7 @@ import ReportIncident from './pages/ReportIncident';
 import IncidentLibrary from './pages/IncidentLibrary';
 import Analytics from './pages/Analytics';
 import SafetyGuidance from './pages/SafetyGuidance';
+import Organizations from './pages/Organizations';
 import './App.css';
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/library" element={<IncidentLibrary />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/guidance" element={<SafetyGuidance />} />
+            <Route path="/organizations" element={<Organizations />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

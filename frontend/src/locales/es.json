@@ -8,7 +8,8 @@
     "login": "Iniciar Sesión",
     "register": "Registrarse",
     "logout": "Cerrar Sesión",
-    "guidance": "Guía de Seguridad"
+    "guidance": "Guía de Seguridad",
+    "organizations": "Mi Organización"
   },
   "home": {
     "hero_subtitle": "Reporta, analiza y visualiza preocupaciones de seguridad en tu lugar de trabajo, escuela o comunidad. Privado. Anónimo. Con IA.",
@@ -94,6 +95,31 @@
     "total": "Total de Incidentes",
     "recent": "Incidentes Recientes",
     "quick_actions": "Acciones Rápidas"
+  },
+  "org": {
+    "title": "Mi Organización",
+    "your_org": "Tu Organización",
+    "no_org": "Todavía no perteneces a ninguna organización. Crea una o únete a una existente.",
+    "viewer_notice": "Tienes acceso de visualizador — puedes ver incidentes pero no enviar reportes.",
+    "login_required": "Inicia sesión para gestionar organizaciones.",
+    "create_title": "Crear Organización",
+    "name": "Nombre de la Organización",
+    "name_placeholder": "ej. Escuela Riverside, Almacén Unity...",
+    "name_required": "El nombre de la organización es obligatorio.",
+    "type": "Tipo",
+    "create_btn": "Crear y Ser Administrador",
+    "created": "Organización creada. Ahora eres el administrador.",
+    "create_error": "Error al crear la organización.",
+    "join_title": "Unirse a una Organización",
+    "join_btn": "Unirse",
+    "joined": "Te has unido a la organización exitosamente.",
+    "join_error": "Error al unirse a la organización.",
+    "members_title": "Miembros",
+    "member_name": "Usuario",
+    "member_email": "Correo",
+    "member_role": "Rol",
+    "role_updated": "Rol actualizado exitosamente.",
+    "role_error": "Error al actualizar el rol."
   },
   "guidance": {
     "title": "Guía de Seguridad",

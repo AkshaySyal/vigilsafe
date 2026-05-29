@@ -47,6 +47,16 @@ def join_organization(org_id):
     return jsonify({'message': f'Joined {org.name}', 'org': org.to_dict()}), 200
 
 
+@org_bp.route('/<int:org_id>/members', methods=['GET'])
+@require_role('reporter')
+def get_members(org_id):
+    user = User.query.get(int(get_jwt_identity()))
+    if user.org_id != org_id:
+        return jsonify({'error': 'Access denied'}), 403
+    members = User.query.filter_by(org_id=org_id).all()
+    return jsonify([m.to_dict() for m in members]), 200
+
+
 @org_bp.route('/<int:org_id>/members/<int:user_id>/role', methods=['PATCH'])
 @require_role('admin')
 def set_member_role(org_id, user_id):

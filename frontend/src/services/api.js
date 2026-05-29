@@ -34,6 +34,8 @@ export const orgsAPI = {
   list: () => api.get('/organizations/'),
   create: (data) => api.post('/organizations/create', data),
   join: (id) => api.post(`/organizations/join/${id}`),
+  members: (orgId) => api.get(`/organizations/${orgId}/members`),
+  setRole: (orgId, userId, role) => api.patch(`/organizations/${orgId}/members/${userId}/role`, { role }),
 };
 
 export const uploadsAPI = {
